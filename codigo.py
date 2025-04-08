@@ -20,15 +20,19 @@ pyautogui.hotkey("tab", "enter")
 pyautogui.write("https://dlp.hashtagtreinamentos.com/python/intensivao/login")
 pyautogui.press("enter")
 
-time.sleep(3) # espera 3 segundos para carregar o site
+time.sleep(3) # espera 3 segundos
 
 # fazer login 
-pyautogui.click()
+pyautogui.click(x=682, y=412)
+pyautogui.write("danieljuniorpantojapureza@gmail.com")
+# preencher senha 
+pyautogui.press("tab")
+pyautogui.write("semsenha")
+# botão para logar
+pyautogui.press("tab")
+pyautogui.press("enter")
 
-
-# selecionar o campo de email
-# escrever email
-# preencher senha
+time.sleep(3) # espera 3 segundos
 
 # importar a base de produtos pra cadastrar
 
