@@ -34,7 +34,10 @@ pyautogui.press("enter")
 
 time.sleep(3) # espera 3 segundos
 
-# importar a base de produtos pra cadastrar
+# importar a base de dados
+import pandas
+
+tabela = pandas.read_csv("produtos.csv")
 
 # cadastrar um produto
 # preencher campos
