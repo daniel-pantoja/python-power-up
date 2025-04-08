@@ -14,7 +14,8 @@ pyautogui.write("google chrome")
 pyautogui.press("enter")
 # selecionar a primeira conta do navegador
 time.sleep(2) # espera 2 segundos
-pyautogui.hotkey("tab", "enter")
+pyautogui.press("tab")
+pyautogui.press("enter")
 
 # digitar o link e entrar
 pyautogui.write("https://dlp.hashtagtreinamentos.com/python/intensivao/login")
@@ -39,9 +40,46 @@ import pandas
 
 tabela = pandas.read_csv("produtos.csv")
 
-# cadastrar um produto
-# preencher campos
+print(tabela)
 
-# dar scroll de tudo pra cima
+# cadastrar um produto
+for linha in tabela.index: 
+  pyautogui.click(x=661, y=294)
+
+  codigo = tabela.loc[linha, "codigo"]
+  pyautogui.write(codigo)
+
+  pyautogui.press("tab") # passar para o próximo campo
+  marca = tabela.loc[linha, "marca"]
+  pyautogui.write(marca)  
+
+  pyautogui.press("tab") # passar para o próximo campo
+  tipo = tabela.loc[linha, "tipo"]
+  pyautogui.write(tipo)
+
+  pyautogui.press("tab") # passar para o próximo campo
+  categoria = str(tabela.loc[linha, "categoria"])
+  pyautogui.write(categoria)
+
+  pyautogui.press("tab") # passar para o próximo campo
+  preco_unitario = str(tabela.loc[linha, "preco_unitario"])
+  pyautogui.write(preco_unitario)
+
+  pyautogui.press("tab") # passar para o próximo campo
+  custo = str(tabela.loc[linha, "custo"])
+  pyautogui.write(custo)
+
+  pyautogui.press("tab") # passar para o próximo campo
+  obs = str(tabela.loc[linha, "obs"])
+  
+  if obs != "nan":
+    pyautogui.write(obs)
+
+  # passou para o botão de enviar
+  pyautogui.press("tab") 
+  pyautogui.press("enter")
+
+  # dar scroll de tudo pra cima
+  pyautogui.scroll(10000)
 
 # repetir o processo até o fim.
