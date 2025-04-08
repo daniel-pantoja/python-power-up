@@ -13,14 +13,19 @@ pyautogui.press("win")
 pyautogui.write("google chrome")
 pyautogui.press("enter")
 # selecionar a primeira conta do navegador
-time.sleep(2)
+time.sleep(2) # espera 2 segundos
 pyautogui.hotkey("tab", "enter")
 
 # digitar o link e entrar
 pyautogui.write("https://dlp.hashtagtreinamentos.com/python/intensivao/login")
 pyautogui.press("enter")
 
+time.sleep(3) # espera 3 segundos para carregar o site
+
 # fazer login 
+pyautogui.click()
+
+
 # selecionar o campo de email
 # escrever email
 # preencher senha
