@@ -1,15 +1,24 @@
 import pyautogui
+import time
 
 # pyautogui.click --> clicar em algum lugar
 # pyautogui.press --> apertar 1 tecla
 # pyautogui.write --> escrever um texto
 # pyautogui.hotkey --> apertar uma combinação de teclas 
 
-# Lógica: 
+pyautogui.PAUSE = 0.5
 
-# abrir o navegador 
-# entrar no navegador
-# digitar o link e entrar no site
+# abrir o navegador (FireFox)
+pyautogui.press("win")
+pyautogui.write("google chrome")
+pyautogui.press("enter")
+# selecionar a primeira conta do navegador
+time.sleep(2)
+pyautogui.hotkey("tab", "enter")
+
+# digitar o link e entrar
+pyautogui.write("https://dlp.hashtagtreinamentos.com/python/intensivao/login")
+pyautogui.press("enter")
 
 # fazer login 
 # selecionar o campo de email
