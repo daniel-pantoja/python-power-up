@@ -10,8 +10,10 @@ O objetivo deste projeto é melhorar e automatizar o processo de cadastro de pro
 * VS Code
 * Python
 * Package pyautogui
+* Package pandas
 * Package time
 * CSV (Comma-Separated Values)
 
 ## Ferramentas
 Foi instalado a linguagem <a href="https://www.python.org/downloads/windows/" target="_blank"> Python</a> no Windows com a versão 3.12.6
+Instalações das bibliotecas pyautogui e pandas no terminal do <a href="https://code.visualstudio.com/download" target="_blank">Vs Code</a>
